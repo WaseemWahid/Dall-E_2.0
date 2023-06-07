@@ -11,10 +11,28 @@ const FormField = ({ labelName, type, name, placeholder, value,
                 >
                     {labelName}
                 </label>
+                {isSurpriseMe && (
+                    <button
+                        type='button'
+                        onClick={handleSurpriseMe}
+                        className='font-semibold text-xs bg-[#EFECF1] py-1 px-2 rouded-[5px] text-black'
+                    >
+                        Surprise Me
+                    </button>
+                )}
             </div>
-            <div>
-
-            </div>
+            <input
+                type={type}
+                id={name}
+                name={name}
+                placeholder={placeholder}
+                value={value}
+                onChange={handleChange}
+                required
+                className='bg-gray-50 border border-gray-300 text-gray-900
+                text-smh rounded-lg focus:ring-[#4649FF] focu:border-[#4649FF] 
+                outline-none block w-full p-3'
+            />
         </div>
     )
 }
